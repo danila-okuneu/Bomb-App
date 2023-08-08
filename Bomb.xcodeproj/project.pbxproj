@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F95F5202A8211C0005B9CAE /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95F51F2A8211C0005B9CAE /* RulesView.swift */; };
-		4F95F5232A822193005B9CAE /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95F5222A822193005B9CAE /* CategoryView.swift */; };
-		4F95F5252A8277D3005B9CAE /* RuleViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95F5242A8277D3005B9CAE /* RuleViewItem.swift */; };
-		4F95F5312A842AB4005B9CAE /* DelaGothicOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F95F5302A842AB4005B9CAE /* DelaGothicOne.ttf */; };
+		902E9D862A81491800E39655 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9D852A81491800E39655 /* GameEndViewController.swift */; };
+		902E9D892A8150AE00E39655 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9D882A8150AE00E39655 /* Extension.swift */; };
+		904203322A825EFF00E9DB64 /* DelaGothicOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 904203312A825EFF00E9DB64 /* DelaGothicOne.ttf */; };
+		90DDB9AB2A8132E70080C5AF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 90DDB9AA2A8132E70080C5AF /* SnapKit */; };
 		CBDBC9382A8119E6003F22E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBC9372A8119E6003F22E0 /* AppDelegate.swift */; };
 		CBDBC93A2A8119E6003F22E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBC9392A8119E6003F22E0 /* SceneDelegate.swift */; };
 		CBDBC93C2A8119E6003F22E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBC93B2A8119E6003F22E0 /* MainViewController.swift */; };
@@ -23,10 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F95F51F2A8211C0005B9CAE /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
-		4F95F5222A822193005B9CAE /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		4F95F5242A8277D3005B9CAE /* RuleViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewItem.swift; sourceTree = "<group>"; };
-		4F95F5302A842AB4005B9CAE /* DelaGothicOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DelaGothicOne.ttf; sourceTree = "<group>"; };
+		902E9D852A81491800E39655 /* GameEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
+		902E9D882A8150AE00E39655 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		904203312A825EFF00E9DB64 /* DelaGothicOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DelaGothicOne.ttf; sourceTree = "<group>"; };
 		CBDBC9342A8119E6003F22E0 /* Bomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDBC9372A8119E6003F22E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDBC9392A8119E6003F22E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,10 +60,10 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		4F95F52A2A8420CF005B9CAE /* Fonts */ = {
+		904203302A825EEE00E9DB64 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				4F95F5302A842AB4005B9CAE /* DelaGothicOne.ttf */,
+				904203312A825EFF00E9DB64 /* DelaGothicOne.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -96,7 +95,8 @@
 				CBDBC9402A8119E7003F22E0 /* Assets.xcassets */,
 				CBDBC9422A8119E7003F22E0 /* LaunchScreen.storyboard */,
 				CBDBC9452A8119E7003F22E0 /* Info.plist */,
-				4F95F52A2A8420CF005B9CAE /* Fonts */,
+				904203302A825EEE00E9DB64 /* Fonts */,
+				902E9D872A81509600E39655 /* Extension */,
 			);
 			path = Bomb;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDBC9442A8119E7003F22E0 /* LaunchScreen.storyboard in Resources */,
-				4F95F5312A842AB4005B9CAE /* DelaGothicOne.ttf in Resources */,
+				904203322A825EFF00E9DB64 /* DelaGothicOne.ttf in Resources */,
 				CBDBC9412A8119E7003F22E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
