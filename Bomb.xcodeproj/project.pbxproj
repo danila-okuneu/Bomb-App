@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		902E9D862A81491800E39655 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9D852A81491800E39655 /* GameEndViewController.swift */; };
-		902E9D892A8150AE00E39655 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9D882A8150AE00E39655 /* Extension.swift */; };
-		902E9D8C2A815E4800E39655 /* DelaGothicOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 902E9D8B2A815E4800E39655 /* DelaGothicOne.ttf */; };
-		90DDB9AB2A8132E70080C5AF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 90DDB9AA2A8132E70080C5AF /* SnapKit */; };
+		4F95F5202A8211C0005B9CAE /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95F51F2A8211C0005B9CAE /* RulesView.swift */; };
+		4F95F5232A822193005B9CAE /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95F5222A822193005B9CAE /* CategoryView.swift */; };
+		4F95F5252A8277D3005B9CAE /* RuleViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95F5242A8277D3005B9CAE /* RuleViewItem.swift */; };
+		4F95F5312A842AB4005B9CAE /* DelaGothicOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F95F5302A842AB4005B9CAE /* DelaGothicOne.ttf */; };
 		CBDBC9382A8119E6003F22E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBC9372A8119E6003F22E0 /* AppDelegate.swift */; };
 		CBDBC93A2A8119E6003F22E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBC9392A8119E6003F22E0 /* SceneDelegate.swift */; };
 		CBDBC93C2A8119E6003F22E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBC93B2A8119E6003F22E0 /* MainViewController.swift */; };
@@ -23,9 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		902E9D852A81491800E39655 /* GameEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
-		902E9D882A8150AE00E39655 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		902E9D8B2A815E4800E39655 /* DelaGothicOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DelaGothicOne.ttf; sourceTree = "<group>"; };
+		4F95F51F2A8211C0005B9CAE /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		4F95F5222A822193005B9CAE /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		4F95F5242A8277D3005B9CAE /* RuleViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewItem.swift; sourceTree = "<group>"; };
+		4F95F5302A842AB4005B9CAE /* DelaGothicOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DelaGothicOne.ttf; sourceTree = "<group>"; };
 		CBDBC9342A8119E6003F22E0 /* Bomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDBC9372A8119E6003F22E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDBC9392A8119E6003F22E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,33 +45,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90DDB9AB2A8132E70080C5AF /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		902E9D872A81509600E39655 /* Extension */ = {
+		4F95F5212A8211D2005B9CAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				902E9D882A8150AE00E39655 /* Extension.swift */,
+				4F95F51F2A8211C0005B9CAE /* RulesView.swift */,
+				4F95F5222A822193005B9CAE /* CategoryView.swift */,
+				4F95F5242A8277D3005B9CAE /* RuleViewItem.swift */,
 			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		902E9D8A2A815E1F00E39655 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				902E9D8B2A815E4800E39655 /* DelaGothicOne.ttf */,
-			);
-			path = Fonts;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4F95F52A2A8420CF005B9CAE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				4F95F5292A8420CB005B9CAE /* DelaGothicOne.ttf */,
+				4F95F5302A842AB4005B9CAE /* DelaGothicOne.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -96,12 +90,13 @@
 			children = (
 				CBDBC9372A8119E6003F22E0 /* AppDelegate.swift */,
 				CBDBC9392A8119E6003F22E0 /* SceneDelegate.swift */,
+				4F95F5212A8211D2005B9CAE /* Views */,
+				CBDBC94E2A811C1E003F22E0 /* Models */,
 				CBDBC94D2A811C0F003F22E0 /* Controller */,
 				CBDBC9402A8119E7003F22E0 /* Assets.xcassets */,
 				CBDBC9422A8119E7003F22E0 /* LaunchScreen.storyboard */,
 				CBDBC9452A8119E7003F22E0 /* Info.plist */,
-				902E9D8A2A815E1F00E39655 /* Fonts */,
-				902E9D872A81509600E39655 /* Extension */,
+				4F95F52A2A8420CF005B9CAE /* Fonts */,
 			);
 			path = Bomb;
 			sourceTree = "<group>";
@@ -111,12 +106,18 @@
 			children = (
 				CBDBC93B2A8119E6003F22E0 /* MainViewController.swift */,
 				CBDBC94B2A811BE9003F22E0 /* GameViewController.swift */,
-				902E9D852A81491800E39655 /* GameEndViewController.swift */,
 				CBDBC94F2A811C56003F22E0 /* RulesViewController.swift */,
 				CBDBC9512A811CA9003F22E0 /* CategoriesViewController.swift */,
 				CBDBC9532A811CF6003F22E0 /* NavigationController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CBDBC94E2A811C1E003F22E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +136,6 @@
 			dependencies = (
 			);
 			name = Bomb;
-			packageProductDependencies = (
-				90DDB9AA2A8132E70080C5AF /* SnapKit */,
-			);
 			productName = Bomb;
 			productReference = CBDBC9342A8119E6003F22E0 /* Bomb.app */;
 			productType = "com.apple.product-type.application";
@@ -166,9 +164,6 @@
 				Base,
 			);
 			mainGroup = CBDBC92B2A8119E6003F22E0;
-			packageReferences = (
-				90DDB9A92A8132E70080C5AF /* XCRemoteSwiftPackageReference "SnapKit" */,
-			);
 			productRefGroup = CBDBC9352A8119E6003F22E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -184,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDBC9442A8119E7003F22E0 /* LaunchScreen.storyboard in Resources */,
-				902E9D8C2A815E4800E39655 /* DelaGothicOne.ttf in Resources */,
+				4F95F5312A842AB4005B9CAE /* DelaGothicOne.ttf in Resources */,
 				CBDBC9412A8119E7003F22E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				902E9D892A8150AE00E39655 /* Extension.swift in Sources */,
+				4F95F5202A8211C0005B9CAE /* RulesView.swift in Sources */,
 				CBDBC9502A811C56003F22E0 /* RulesViewController.swift in Sources */,
 				CBDBC94C2A811BE9003F22E0 /* GameViewController.swift in Sources */,
 				CBDBC9522A811CA9003F22E0 /* CategoriesViewController.swift in Sources */,
@@ -204,7 +199,6 @@
 				CBDBC93C2A8119E6003F22E0 /* MainViewController.swift in Sources */,
 				CBDBC9382A8119E6003F22E0 /* AppDelegate.swift in Sources */,
 				CBDBC9542A811CF6003F22E0 /* NavigationController.swift in Sources */,
-				902E9D862A81491800E39655 /* GameEndViewController.swift in Sources */,
 				CBDBC93A2A8119E6003F22E0 /* SceneDelegate.swift in Sources */,
 				4F95F5232A822193005B9CAE /* CategoryView.swift in Sources */,
 			);
@@ -418,25 +412,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		90DDB9A92A8132E70080C5AF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		90DDB9AA2A8132E70080C5AF /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 90DDB9A92A8132E70080C5AF /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CBDBC92C2A8119E6003F22E0 /* Project object */;
 }
