@@ -12,7 +12,7 @@ class GameViewController: UIViewController {
     
     
     
-    private lazy var titleLabel: UILabel = _titleLabel
+   
     private lazy var textLabel: UILabel = _textLabel
     private lazy var imageView: UIImageView = _imageView
     private lazy var launchButton: UIButton = _launchButton
