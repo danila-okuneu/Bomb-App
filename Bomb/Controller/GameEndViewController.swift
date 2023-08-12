@@ -8,7 +8,13 @@
 import UIKit
 import SnapKit
 
+protocol GameEndViewControllerDelegate: AnyObject {
+    func startOverGame(_ controller: GameEndViewController)
+}
+
 class GameEndViewController: UIViewController {
+    
+    weak var delegate: GameEndViewControllerDelegate?
 
     private lazy var descriptionLabel: UILabel = _descriptionLabel
     private lazy var taskLabel: UILabel = _taskLabel
@@ -19,11 +25,18 @@ class GameEndViewController: UIViewController {
     private lazy var startOverButton: UIButton = _startOverButton
 
     override func viewDidLoad() {
+        self.title = "Игра"
         super.viewDidLoad()
-        setBackground()
         
+        setBackground()
         addSubviews()
         applyConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarTitle(for: self)
+        navigationController?.addBackButton()
     }
     
     private func addSubviews() {
@@ -53,7 +66,7 @@ class GameEndViewController: UIViewController {
         }
         
         anotherTaskButton.snp.makeConstraints { make in
-            make.top.equalTo(taskLabel.snp.bottom).offset(20)
+            make.bottom.equalTo(startOverButton.snp.top).offset(-15)
             make.leading.trailing.equalToSuperview().inset(50)
             make.height.equalTo(79)
         }
@@ -63,6 +76,15 @@ class GameEndViewController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(50)
             make.height.equalTo(79)
         }
+    }
+    
+    @objc func anotherTaskButtonTapped() {
+        taskLabel.text = "Какое-то другое задание, надо будет приконнектить сюда"
+    }
+    
+    @objc func startOverButtonTapped() {
+        navigationController?.popViewController(animated: true)
+        delegate?.startOverGame(self)
     }
 }
 
@@ -88,7 +110,7 @@ private extension GameEndViewController {
         let label = UILabel()
         label.text = "В следующем раунде после каждого ответа хлопать в ладоши"
         label.numberOfLines = 0
-        label.textColor = UIColor(named: "textColor")
+        label.textColor = UIColor().getTextColor()
         label.textAlignment = .center
         label.font = UIFont(name: "Dela Gothic One", size: 20)
         return label
@@ -96,14 +118,15 @@ private extension GameEndViewController {
     
     var _anotherTaskButton: UIButton {
         let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(named: "buttonColor")
+        button.backgroundColor = UIColor().getButtonColor()
         button.setTitle("Другое\nЗадание", for: .normal)
-        button.tintColor = UIColor(named: "buttonTextColor")
+        button.tintColor = UIColor().getButtonTextColor()
         button.titleLabel?.font = UIFont(name: "Dela Gothic One", size: 24)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
         button.layer.cornerRadius = 40
         button.clipsToBounds = true
+        button.addTarget(self, action: #selector(anotherTaskButtonTapped), for: .touchUpInside)
         button.drawShadow()
         return button
     }
@@ -113,12 +136,14 @@ private extension GameEndViewController {
         button.setTitle("Начать\nЗаново", for: .normal)
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
-        button.backgroundColor = UIColor(named: "buttonColor")
+        button.backgroundColor = UIColor().getButtonColor()
         button.titleLabel?.font = UIFont(name: "Dela Gothic One", size: 24)
-        button.tintColor = UIColor(named: "buttonTextColor")
+        button.tintColor = UIColor().getButtonTextColor()
         button.layer.cornerRadius = 40
         button.clipsToBounds = true
+        button.addTarget(self, action: #selector(startOverButtonTapped), for: .touchUpInside)
         button.drawShadow()
+        
         return button
     }
 }

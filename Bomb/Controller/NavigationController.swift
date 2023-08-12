@@ -7,12 +7,15 @@
 import UIKit
 
 extension UINavigationController {
-    func setNavigationBarTitle(for viewController: UIViewController) {
+    
+    func setNavigationBarTitle(for view: UIViewController) {
         let barTitle = UILabel()
-        barTitle.text = viewController.title
+        barTitle.text = view.title
         barTitle.font = UIFont(name: "Dela Gothic One", size: 30)
-        barTitle.textColor = UIColor(red: 127/255, green: 68/255, blue: 167/255, alpha: 1)
-        viewController.navigationItem.titleView = barTitle
+        barTitle.textColor = UIColor().getButtonTextColor()
+        view.navigationItem.titleView = barTitle
+        navigationBar.drawShadow()
+        
     }
 
     func addBackButton() {
@@ -20,10 +23,9 @@ extension UINavigationController {
         let backImage = UIImage(named: "BackButton")?.withRenderingMode(.alwaysTemplate)
         backButton.setImage(backImage, for: .normal)
         backButton.imageView?.contentMode = .scaleAspectFit
-        backButton.tintColor = UIColor().getButtonColor()
-
-        backButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        backButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        backButton.tintColor = UIColor().getButtonTextColor()
+        backButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
 
@@ -33,10 +35,14 @@ extension UINavigationController {
     
     func addPauseButton() {
         let pauseButton = UIButton(type: .custom)
+        
         let pauseImage = UIImage(named: "PauseButton")?.withRenderingMode(.alwaysTemplate)
+        let playImage = UIImage(named: "PlayButton")?.withRenderingMode(.alwaysTemplate)
         pauseButton.setImage(pauseImage, for: .normal)
+        pauseButton.setImage(playImage, for: .selected)
+        
         pauseButton.imageView?.contentMode = .scaleAspectFit
-        pauseButton.tintColor = UIColor().getButtonColor()
+       // pauseButton.tintColor = UIColor().getButtonTextColor()
 
         pauseButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
         pauseButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
@@ -48,10 +54,21 @@ extension UINavigationController {
 
     @objc func backButtonTapped() {
         popToRootViewController(animated: true)
-        setNavigationBarTitle(for: UIViewController())
+        setNavigationBarTitle(for: self)
     }
     
-    @objc func pauseButtonTapped() {
-        // функционал кнопки (В будущем)
+    @objc func pauseButtonTapped(_ sender: UIButton) {
+        if let viewController = visibleViewController as? GameViewController {
+            guard viewController.isGameStarted else { return }
+            
+            if sender.isSelected {
+                viewController.updateLabel(with: "Здесь типа то же самое задание")
+                viewController.startTimer()
+            } else {
+                viewController.updateLabel(with: "Пауза")
+                viewController.pauseTimer()
+            }
+            sender.isSelected.toggle()
+        }
     }
 }

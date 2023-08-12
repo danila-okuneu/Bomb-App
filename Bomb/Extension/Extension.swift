@@ -10,10 +10,13 @@ import UIKit
 extension UIViewController {
     
     func setBackground() {
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "background")
-        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
-        view.insertSubview(backgroundImage, at: 0)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [
+            UIColor.systemOrange.cgColor,
+            UIColor(red: 1, green: 187/255, blue: 48/255, alpha: 1).cgColor,
+            ]
+        view.layer.addSublayer(gradientLayer)
     }
 }
 
@@ -44,8 +47,10 @@ extension UIView {
         self.layer.masksToBounds = false
         self.layer.shadowRadius = 2
         self.layer.shadowOpacity = 0.5
-
-        self.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func drawBorder(color: UIColor) {
+        self.layer.borderColor = color.cgColor
         self.layer.borderWidth = 1.0
     }
     
@@ -63,3 +68,16 @@ extension UIColor {
         return UIColor(red: 250/255, green: 255/255, blue: 0, alpha: 1)
     }
 }
+
+//extension UIColor {
+//    func getButtonColor() -> UIColor {
+//        return UIColor(red: 247/255, green: 212/255, blue: 0, alpha: 1)
+//    }
+//    func getTextColor() -> UIColor {
+//        return UIColor(red: 106/255, green: 1/255, blue: 25/255, alpha: 1)
+//    }
+//
+//    func getButtonTextColor() -> UIColor {
+//        return UIColor(red: 228/255, green: 48/255, blue: 41/255, alpha: 1)
+//    }
+//}
