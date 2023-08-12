@@ -19,9 +19,8 @@ class RulesViewController: UIViewController {
     override func loadView() {
         super.loadView()
         self.view = rulesView
+        setBackground()
     }
-
-    
 }
 
 

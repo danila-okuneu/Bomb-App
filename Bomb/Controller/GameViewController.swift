@@ -114,14 +114,14 @@ extension GameViewController {
         label.font = UIFont(name: "Dela Gothic One", size: 25)
         return label
     }
-    
+
     var _imageView: UIImageView {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "bomb")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }
-    
+
     var _launchButton: UIButton {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor().getButtonColor()
@@ -134,7 +134,7 @@ extension GameViewController {
         button.drawShadow()
         return button
     }
-    
+
     func openNewScreen() {
         let controller = GameEndViewController()
         controller.delegate = self
