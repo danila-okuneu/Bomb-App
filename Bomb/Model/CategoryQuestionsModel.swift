@@ -88,6 +88,22 @@ struct QuestionStorage {
         Question(category: .nature, question: "Назовите пустыню"),
         Question(category: .nature, question: "Страны, граничащие с Россией"),
         Question(category: .nature, question: "Город с Европе")
+        
+        Question(category: .nature, question: "Назовите страны входившие в СССР"),
+        Question(category: .nature, question: "Назовите город где проходили Олимпийские игры"),
+        Question(category: .nature, question: "Назовите национальность жителя России"),
+        Question(category: .nature, question: "Назовите регионы России"),
+        Question(category: .nature, question: "Назовите валюту стран мира"),
+        Question(category: .nature, question: "Назовите элемент таблицы Менделеева"),
+        Question(category: .nature, question: "Назовите станцию метро Москвы"),
+        Question(category: .nature, question: "Назовите цветок"),
+        Question(category: .nature, question: "Назовите цитату из фильма"),
+        Question(category: .nature, question: "Назовите песню Пугачевой"),
+        Question(category: .nature, question: "Назовите блогера"),
+        Question(category: .nature, question: "Назовите планету"),
+        Question(category: .nature, question: "Назовите компьютерную игру"),
+        Question(category: .nature, question: "Назовите героя мультфильма"),
+        Question(category: .nature, question: "Назовите язык программирования")
     ]
 }
 
